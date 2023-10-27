@@ -1,0 +1,31 @@
+
+
+<!-- <div class="stdform">
+    <ng-content select="h1"></ng-content>
+    <div class="form-group">
+        <input type="text" placeholder="Login" class="form-control">
+    </div>
+
+<div class="form-group">
+    <input type="text" placeholder="SignIn" class="form-control">
+</div>
+<div class="form-group text-right">
+    <ng-content select="button"></ng-content>
+</div>
+</div> -->
+ 
+
+<div class="card ">
+    <div class="card-header bg-info text-white" (click)="ontoggle()">
+        <h1>
+            <ng-content select="strong"></ng-content>
+            <i class="fa-solid text-center float-right"
+            [ngClass]="{
+                'fa-sort-down' : !isCollapsed,
+                'fa-sort-up' : isCollapsed }" ></i>
+        </h1>
+    </div>
+        <div class="card-body bg-warning" *ngIf="isCollapsed" >
+            <ng-content select="p"></ng-content>
+     </div>
+</div>
